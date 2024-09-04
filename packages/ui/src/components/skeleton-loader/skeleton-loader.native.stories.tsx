@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ANIMATION_DURATION, SkeletonLoader } from './skeleton-loader.native';
+import { animationDuration, SkeletonLoader } from './skeleton-loader.native';
 
 type SkeletonLoaderArgs = React.ComponentProps<typeof SkeletonLoader>;
 
@@ -60,7 +60,7 @@ export const SkeletonLoaderMultipleStory: Story = {
         if (count === maxCount || count === 1) {
           step *= -1;
         }
-      }, 1.5 * ANIMATION_DURATION);
+      }, 1.5 * animationDuration);
 
       return () => clearInterval(interval);
     }, []);
